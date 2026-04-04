@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدروس</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F9FAFB]">
+    <header
+      class="w-full py-4 flex flex-row justify-around items-center border-[#E5E7EB] border shadow-sm bg-white"
+    >
+      <div class="logo flex flex-row items-center">
+        <div
+          class="bg-gradient-to-t from-[#4F39F6] to-[#155DFC] w-10 h-10 flex justify-center items-center rounded-lg"
+        >
+          <img src="/img/logo.png" class="w-6 h-6" />
+        </div>
+        <h1 class="text-[24px] font-bold pr-2">منصة التعليم الأكاديمي</h1>
+      </div>
+
+      <nav class="nav">
+        <ul class="flex flex-row">
+          <li>
+            <a href="home.html" class="pl-4 font-normal text-base">الرئيسية</a>
+          </li>
+          <li>
+            <a href="courses.html" class="pl-4 font-normal text-base"
+              >الكورسات</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="font-normal text-base">حول المنصة</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="w-[1024px] mx-auto pb-16">
+      <a
+        href="courses.html"
+        class="flex items-end justify-start flex-row pt-12"
+      >
+        <img src="/img/arrow.svg" alt="" class="w-5 h-5" />
+        <p class="text-[16px] leading-6 font-normal text-[#4A5565] pr-2">
+          العودة إلى الكورسات
+        </p>
+      </a>
+
+      <section
+        class="w-[960px] bg-[#FFFFFF] border border-[#E5E7EB] shadow-sm rounded-2xl mt-6 flex flex-col"
+      >
+        <div class="flex flex-row m-[33px] mb-[24px]">
+          <div
+            id="dynamic-course-faculty"
+            class="min-w-[120px] px-4 font-normal h-[40px] rounded-[33554400px] bg-[#DBEAFE] text-[#1447E6] text-[16px] leading-[24px] flex justify-center items-center ml-3"
+          ></div>
+
+          <div
+            id="dynamic-course-level"
+            class="min-w-[160px] px-4 font-normal h-[40px] rounded-[33554400px] bg-[#F3F4F6] text-[#364153] text-[16px] leading-[24px] flex justify-center items-center ml-3"
+          ></div>
+
+          <div
+            id="dynamic-course-semester"
+            class="min-w-[160px] px-4 font-normal h-[40px] rounded-[33554400px] bg-[#F3F4F6] text-[#364153] text-[16px] leading-[24px] flex justify-center items-center"
+          ></div>
+        </div>
+
+        <div class="flex flex-col pr-[33px] pb-[33px]">
+          <h1
+            id="dynamic-course-title"
+            class="text-[30px] font-bold leading-[36px] text-[#101828] pb-[14px]"
+          ></h1>
+
+          <p
+            id="dynamic-course-desc"
+            class="text-[16px] leading-[26px] font-normal text-[#4A5565] max-w-[886px]"
+          ></p>
+        </div>
+      </section>
+
+      <div
+        class="w-[960px] bg-[#FFFFFF] border border-[#E5E7EB] shadow-sm rounded-2xl mt-6 flex flex-col mb-[32px] pb-[25px]"
+      >
+        <div class="flex flex-row justify-between">
+          <h1
+            class="text-[20px] font-semibold leading-[28px] text-[#101828] pt-[25px] pr-[25px]"
+          >
+            التقدم في الكورس
+          </h1>
+
+          <div class="flex flex-row pt-[25px] pl-[25px]">
+            <p id="progress-counter">0 / 0 درس</p>
+          </div>
+        </div>
+
+        <div
+          class="w-[910px] h-[12px] rounded-[33554400px] bg-[#F3F4F6] mr-[25px] mt-[12px] overflow-hidden"
+        >
+          <div
+            id="progress-line"
+            class="h-full rounded-[33554400px] bg-gradient-to-b from-[#4F39F6] to-[#155DFC]"
+            style="width: 0%"
+          ></div>
+        </div>
+
+        <div class="flex flex-row pt-[12px] pr-[33px]">
+          <p id="progress-percentage" class="text-[#4A5565]">0% مكتمل</p>
+        </div>
+      </div>
+
+      <section
+        class="w-[960px] rounded-[16px] border border-[#E5E7EB] bg-[#FFFFFF] shadow-sm pb-[20px]"
+      >
+        <div id="video-player" class="w-full mb-6"></div>
+        <p
+          class="pr-[33px] pt-[33px] pb-[25px] text-[20px] font-semibold leading-[28px] text-[#101828]"
+        >
+          قائمة الدروس
+        </p>
+
+        <div id="lectures-container" class="px-[33px]"></div>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
